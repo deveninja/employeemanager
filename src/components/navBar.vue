@@ -6,7 +6,7 @@
           </div>
       </div>
       <div class="another-div">
-          
+          <h1>Push to Github</h1>
       </div>
   </nav>
 </template>
