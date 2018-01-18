@@ -13,7 +13,11 @@
       <router-link to="/" class="btn grey"> <i class="fa fa-arrow-left"></i>   Back</router-link>
       <button @click="deleteEmployee" class="btn red"> <i class="fa fa-trash-o"></i> Delete</button>
 
-
+      <div class="fixed-action-btn">
+          <router-link v-bind:to="{name: 'edit-employee', params: {employee_id: employee_id}}" class="btn-floating btn-large green">
+            <i class="fa fa-pencil"></i>
+          </router-link>
+      </div>
       
   </div>
 </template>

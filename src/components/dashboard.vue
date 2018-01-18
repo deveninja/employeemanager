@@ -13,7 +13,7 @@
             </span>
 
             <router-link class="secondary-content" v-bind:to="{name: 'view-employee', params: {employee_id: employee.employee_id}}">
-                <i class="fa fa-user-o"></i>
+                <i class="fa fa-user" style="color:#4CAF50"></i>
             </router-link>
           </li>
       </ul>
