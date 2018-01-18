@@ -4,23 +4,34 @@
       <div class="row">
         <form @submit.prevent="updateEmployee" class="col s12">
           <div class="row">
+            <label for="">Employee ID#</label>
             <div class="input-field col s12">
               <input type="text" v-model="employee_id" disabled>
             </div>
           </div>
           <div class="row">
+            <label for="">Full Name</label>
             <div class="input-field col s12">
               <input type="text" v-model="name" required>
             </div>
           </div>
           <div class="row">
+            <label for="">Department</label>
             <div class="input-field col s12">
               <input type="text" v-model="dept" required>
             </div>
           </div>
           <div class="row">
+            <label for="">Position</label>
             <div class="input-field col s12">
               <input type="text" v-model="position" required>
+            </div>
+          </div>
+          <div class="row">
+            <label for="">Skill(s)</label>
+            <div class="input-field col s12">
+              <input type="text" v-model="skill" required>
+              
             </div>
           </div>
           <button class="btn" type="submit">Submit</button>
@@ -44,7 +55,8 @@ export default {
           employee_id: null,
           name: null,
           dept: null,
-          position: null
+          position: null,
+          skill: null
       }
   },
 
@@ -57,7 +69,7 @@ export default {
             vm.name = doc.data().name
             vm.dept = doc.data().dept
             vm.position = doc.data().position
-
+            vm.skill = doc.data().skill
           })
         })
       })
@@ -73,6 +85,7 @@ export default {
             this.name = doc.data().name
             this.dept = doc.data().dept
             this.position = doc.data().position
+            this.skill = doc.data().skill
           })
         })
     },
@@ -84,7 +97,8 @@ export default {
             employee_id: this.employee_id,
             name: this.name,
             dept: this.dept,
-            position: this.position
+            position: this.position,
+            skill: this.skill
           })
           .then(() => {
             this.$router.push({name: 'view-employee', params: {employee_id: this.employee_id}})
