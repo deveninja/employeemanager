@@ -1,3 +1,19 @@
-#app h4 {
-    color: blue;
+/* Variables */
+:root {
+    --main-color:linear-gradient(rgb(1, 172, 1), rgb(11, 49, 6));
+    
+}
+
+
+
+/* Main Design */
+.main-header,
+.green {
+    background: var(--main-color); 
+}
+
+.sub-title {
+    color:rgba(3,3,3,0.4);
+    font-style: italic;
+    
 }

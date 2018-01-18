@@ -5,6 +5,7 @@ import newEmployee from '@/components/newEmployee'
 import viewEmployee from '@/components/viewEmployee'
 import editEmployee from '@/components/editEmployee'
 
+
 Vue.use(Router)
 
 export default new Router({

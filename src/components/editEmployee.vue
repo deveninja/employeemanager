@@ -1,6 +1,6 @@
 <template>
   <div id="edit-employee">
-      <h3>Edit Employee <span style="font-size:20px;">- <router-link v-bind:to="{name: 'view-employee', params: {employee_id: employee.employee_id}}">{{name}}</router-link></span> </h3> 
+      <h3>Edit Employee <span style="font-size:25px;">- <router-link v-bind:to="{name: 'view-employee', params: {employee_id: employee_id}}">{{name}}</router-link></span> </h3> 
       <div class="row">
         <form @submit.prevent="updateEmployee" class="col s12">
           <div class="row">
@@ -87,7 +87,7 @@ export default {
             position: this.position
           })
           .then(() => {
-            this.$route.push({name: 'view-employee'})
+            this.$router.push({name: 'view-employee', params: {employee_id: this.employee_id}})
           })
         })
       }) 

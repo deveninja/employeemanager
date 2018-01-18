@@ -3,11 +3,10 @@
       <ul class="collection with-header">
           <li class="collection-header">
               <h4>Employees</h4>
-              <span>Click the name or the eye icon to view employee</span>
+              <span class="sub-title">Click the name or the user icon to view employee</span>
           </li>
           <li v-for="employee in employees" v-bind:key="employee.id" class="collection-item">
-            <div class="chip"><span>{{employee.dept}}</span></div>
-            ID#:{{employee.employee_id}}
+            
             <span>
             <router-link v-bind:to="{name: 'view-employee', params: {employee_id: employee.employee_id}}">{{employee.name}}</router-link>
             </span>
@@ -35,7 +34,7 @@ export default {
       }
   },
   created () {
-      db.collection('employees').orderBy('dept').get().then(querySnapshot => {
+      db.collection('employees').orderBy('name').get().then(querySnapshot => {
           querySnapshot.forEach(doc => {
               
               const data = {

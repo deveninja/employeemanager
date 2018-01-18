@@ -2,8 +2,10 @@
   <div id="view-employee">
       <ul class="collection with-header">
           <li class="collection-header">
-              <h4>{{name}}</h4>
+              <h4>{{name}}</h4><span class="sub-title">Profile</span>
+              
           </li>
+          <span></span>
           <li class="collection-item">Employee ID#: {{employee_id}}</li>
           <li class="collection-item">Department: {{dept}}</li>
           <li class="collection-item">Position: {{position}}</li>
@@ -75,4 +77,10 @@ export default {
     }
   }
 }
+
+
+
 </script>
+
+
+
