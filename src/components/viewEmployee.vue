@@ -9,19 +9,20 @@
           <li class="collection-item">Employee ID#: {{employee_id}}</li>
           <li class="collection-item">Department: {{dept}}</li>
           <li class="collection-item">Position: {{position}}</li>
+          <li class="collection-item">Skill(s): {{skill}}</li>
           
       </ul>
       
       <router-link to="/" class="btn grey"> <i class="fa fa-arrow-left"></i>   Back</router-link>
       <button @click="deleteEmployee" class="btn red"> <i class="fa fa-trash-o"></i> Delete</button>
-
-      <div class="fixed-action-btn">
+      <div class="action-btn">
+        <div class="fixed-action-btn">
           <router-link v-bind:to="{name: 'edit-employee', params: {employee_id: employee_id}}" class="btn-floating btn-large green">
             <i class="fa fa-pencil"></i>
           </router-link>
+        </div>
       </div>
-      
-  </div>
+ </div>
 </template>
 
 <script>
@@ -33,7 +34,8 @@ export default {
             employee_id: null,
             name: null,
             dept: null,
-            position: null
+            position: null,
+            skill: null
         }
     },
 
@@ -46,6 +48,7 @@ export default {
             vm.name = doc.data().name
             vm.dept = doc.data().dept
             vm.position = doc.data().position
+            vm.skill = doc.data().skill
 
           })
         })
@@ -62,6 +65,7 @@ export default {
           this.name = doc.data().name
           this.dept = doc.data().dept
           this.position = doc.data().position
+          this.skill = doc.data().skill
         })
       })
     },

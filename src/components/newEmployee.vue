@@ -27,6 +27,12 @@
               <label for="">Position</label>
             </div>
           </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" v-model="skill" required>
+              <label for="">Skill(s)</label>
+            </div>
+          </div>
           <button class="btn" type="submit">Submit</button>
           <router-link to="/" class="btn grey">Cancel</router-link>
         </form>
@@ -43,7 +49,8 @@ export default {
         employee_id: null,
         name: null,
         dept: null,
-        position: null
+        position: null,
+        skill: null
      }
   },
 
@@ -53,7 +60,8 @@ export default {
         employee_id: this.employee_id,
         name: this.name,
         dept: this.dept,
-        position: this.position
+        position: this.position,
+        skill: this.skill
       })
       .then(docRef => this.$router.push('/'))
       .catch(error => console.log(err))

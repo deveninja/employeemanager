@@ -1,19 +1,26 @@
 /* Variables */
 :root {
     --main-color:linear-gradient(rgb(1, 172, 1), rgb(11, 49, 6));
+    --collection-bg:linear-gradient(rgb(157, 179, 157), rgb(56, 56, 56));
+    
     
 }
 
 
 
 /* Main Design */
+
 .main-header,
 .green {
     background: var(--main-color); 
 }
 
+.collection-header {
+    background:var(--collection-bg); 
+    color: #fff;
+}
 .sub-title {
-    color:rgba(3,3,3,0.4);
+    color: #ddd;
     font-style: italic;
     
 }
