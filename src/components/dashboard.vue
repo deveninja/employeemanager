@@ -3,7 +3,7 @@
       <ul class="collection with-header">
           <li class="collection-header">
               <h4>Employees</h4>
-              <span class="sub-title">Click the name or the user icon to view employee</span>
+              
           </li>
           <li v-for="employee in employees" v-bind:key="employee.id" class="collection-item">
             
@@ -12,15 +12,16 @@
             </span>
 
             <router-link class="secondary-content" v-bind:to="{name: 'view-employee', params: {employee_id: employee.employee_id}}">
-                <i class="fa fa-user" style="color:#4CAF50"> View Profile</i>
+                <i class="fa fa-user"> View Profile</i>
             </router-link>
           </li>
       </ul>
-      <div class="fixed-action-btn">
-          <router-link to="/new" class="btn-floating btn-large green">
+      <div class="action-btn center">
+          <router-link to="/new" class="btn-floating btn-small main-color">
             <i class="fa fa-plus"></i>
           </router-link>
       </div>
+      
  </div>
 </template>
 

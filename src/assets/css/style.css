@@ -1,7 +1,7 @@
 /* Variables */
 :root {
-    --main-color:linear-gradient(rgb(1, 172, 1), rgb(11, 49, 6));
-    --collection-bg:linear-gradient(rgb(157, 179, 157), rgb(56, 56, 56));
+    --main-color:linear-gradient(rgb(130, 169, 228), rgb(26, 106, 172));
+    --collection-bg:linear-gradient(rgb(133, 133, 133), rgb(29, 29, 29));
     
     
 }
@@ -9,15 +9,30 @@
 
 
 /* Main Design */
+.collection {
+    margin-top: 4em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#dashboard  {
+    padding: 0;
+}
+
+body {
+    border: 1px solid blue;
+}
 
 .main-header,
-.green {
+.main-color {
     background: var(--main-color); 
+
 }
 
 .collection-header {
     background:var(--collection-bg); 
     color: #fff;
+    
 }
 .sub-title {
     color: #ddd;
@@ -25,3 +40,16 @@
     
 }
 
+i.fa-user {
+    color:rgb(26, 106, 172);
+}
+
+#footer {
+    height: 40px;
+    background-color: red;
+}
+
+/* Span Classes */
+span.logo {
+    font-size: 25px;
+}

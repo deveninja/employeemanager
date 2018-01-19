@@ -15,3 +15,10 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+new Vue({
+  el: '#footer',
+  router,
+  components: { footer },
+  template: '<footer/>'
+})
