@@ -39,7 +39,7 @@
         </form>
       </div>
       <div class="fixed-action-btn">
-          <router-link to="/new" class="btn-floating btn-large green">
+          <router-link to="/new" class="btn-floating btn-large main-color">
             <i class="fa fa-plus"></i>
           </router-link>
       </div>

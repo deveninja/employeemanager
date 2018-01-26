@@ -17,7 +17,7 @@
           </li>
       </ul>
       <div class="fixed-action-btn center">
-          <router-link to="/new" class="btn-floating btn-med main-color">
+          <router-link to="/new" class="btn-floating btn-large main-color">
             <i class="fa fa-plus"></i>
           </router-link>
       </div>
