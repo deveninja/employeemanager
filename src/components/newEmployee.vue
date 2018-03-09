@@ -33,6 +33,12 @@
               <label for="">Skill(s)</label>
             </div>
           </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" v-model="contact" required>
+              <label for="">contact(s)</label>
+            </div>
+          </div>
           <button class="btn" type="submit">Submit</button>
           <router-link to="/" class="btn grey">Cancel</router-link>
         </form>
@@ -61,7 +67,8 @@ export default {
         name: this.name,
         dept: this.dept,
         position: this.position,
-        skill: this.skill
+        skill: this.skill,
+        contact: this.contact
       })
       .then(docRef => this.$router.push('/'))
       .catch(error => console.log(err))

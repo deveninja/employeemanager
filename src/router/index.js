@@ -4,6 +4,8 @@ import dashboard from '@/components/dashboard'
 import newEmployee from '@/components/newEmployee'
 import viewEmployee from '@/components/viewEmployee'
 import editEmployee from '@/components/editEmployee'
+import login from '@/components/login'
+import register from '@/components/register'
 
 
 Vue.use(Router)
@@ -14,6 +16,16 @@ export default new Router({
       path: '/',
       name: 'dashboard',
       component: dashboard
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: login
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: register
     },
     {
       path: '/new',

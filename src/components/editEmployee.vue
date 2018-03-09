@@ -34,6 +34,13 @@
               
             </div>
           </div>
+          <div class="row">
+            <label for="">Contact(s)</label>
+            <div class="input-field col s12">
+              <input type="text" v-model="contact" required>
+              
+            </div>
+          </div>
           <button class="btn" type="submit">Submit</button>
           <router-link to="/" class="btn grey">Cancel</router-link>
         </form>
@@ -70,6 +77,7 @@ export default {
             vm.dept = doc.data().dept
             vm.position = doc.data().position
             vm.skill = doc.data().skill
+            vm.contact = doc.data().contact
           })
         })
       })
@@ -86,6 +94,7 @@ export default {
             this.dept = doc.data().dept
             this.position = doc.data().position
             this.skill = doc.data().skill
+            this.contact = doc.data().contact
           })
         })
     },
@@ -98,7 +107,8 @@ export default {
             name: this.name,
             dept: this.dept,
             position: this.position,
-            skill: this.skill
+            skill: this.skill,
+            contact: this.contact
           })
           .then(() => {
             this.$router.push({name: 'view-employee', params: {employee_id: this.employee_id}})

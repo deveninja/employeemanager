@@ -10,6 +10,7 @@
           <li class="collection-item">Department: {{dept}}</li>
           <li class="collection-item">Position: {{position}}</li>
           <li class="collection-item">Skill(s): {{skill}}</li>
+          <li class="collection-item">Contact(s): {{contact}}</li>
           
       </ul>
       
@@ -49,6 +50,7 @@ export default {
             vm.dept = doc.data().dept
             vm.position = doc.data().position
             vm.skill = doc.data().skill
+            vm.contact = doc.data().contact
 
           })
         })
@@ -66,6 +68,7 @@ export default {
           this.dept = doc.data().dept
           this.position = doc.data().position
           this.skill = doc.data().skill
+          this.contact = doc.data().contact
         })
       })
     },
